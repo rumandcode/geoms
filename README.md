@@ -1,4 +1,4 @@
 geoms
 =====
 
-Cross-platform game using Gameplay3d
+A cross-platform, retro-styled strategy shooter using Gameplay3d
