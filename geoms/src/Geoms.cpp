@@ -10,6 +10,8 @@ Geoms::Geoms()
 
 void Geoms::initialize()
 {
+    setMultiTouch(true);
+    
     // Load game scene from file
     _scene = Scene::load("res/box.gpb");
 
@@ -51,12 +53,16 @@ void Geoms::render(float elapsedTime)
 
 bool Geoms::drawScene(Node* node)
 {
-    // If the node visited contains a model, draw it
-    Model* model = node->getModel(); 
-    if (model)
-    {
-        model->draw();
-    }
+    // Only draw visible nodes
+    if (node->getBoundingSphere().intersects(_scene->getActiveCamera()->getFrustum()))
+        {
+            // If the node visited contains a model, draw it
+            Model* model = node->getModel(); 
+            if (model)
+            {
+                model->draw(true);
+            }
+        }
     return true;
 }
 
