@@ -2,8 +2,10 @@
 #define TEMPLATEGAME_H_
 
 #include "gameplay.h"
-
 using namespace gameplay;
+
+#include "GeomsScene.h"
+
 
 /**
  * Main game class.
