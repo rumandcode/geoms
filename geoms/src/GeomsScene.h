@@ -10,7 +10,6 @@
 #define __geoms__GeomsScene__
 
 #include "gameplay.h"
-
 using namespace gameplay;
 
 /**
@@ -20,9 +19,33 @@ class GeomsScene: public Scene
 {
 public:
     /**
+     * @see Scene::create
+     */
+    static GeomsScene* create(const char* id = NULL);
+    
+    /**
+     * @see Scene::load
+     */
+    static GeomsScene* load(const char* filePath);
+    
+    
+protected:
+    /**
+     * Called immediately after create() or load()
+     */
+    void onLoad();
+    
+    
+public:
+    /**
      * Constructor.
      */
     GeomsScene();
+    
+    /**
+     * Destructor.
+     */
+    virtual ~GeomsScene();
 };
 
 

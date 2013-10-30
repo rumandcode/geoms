@@ -13,7 +13,7 @@ void Geoms::initialize()
     setMultiTouch(true);
     
     // Load game scene from file
-    _scene = Scene::load("res/box.gpb");
+    _scene = GeomsScene::load("res/box.gpb");
 
     // Set the aspect ratio for the scene's camera to match the current resolution
     _scene->getActiveCamera()->setAspectRatio(getAspectRatio());
