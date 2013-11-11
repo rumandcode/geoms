@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0A44C7F8182093F900E16B5E /* GeomsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A44C7F6182093F900E16B5E /* GeomsScene.cpp */; };
 		0A44C7F9182093F900E16B5E /* GeomsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A44C7F6182093F900E16B5E /* GeomsScene.cpp */; };
+		0A4D6970183058C500FCE329 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D696E183058C500FCE329 /* Ship.cpp */; };
+		0A4D6971183058C500FCE329 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D696E183058C500FCE329 /* Ship.cpp */; };
 		42049B5816ADBB61005DD1F9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42049B5216ADBB61005DD1F9 /* CoreMotion.framework */; };
 		42049B5916ADBB61005DD1F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42049B5316ADBB61005DD1F9 /* Foundation.framework */; };
 		42049B5A16ADBB61005DD1F9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42049B5416ADBB61005DD1F9 /* OpenAL.framework */; };
@@ -68,6 +70,8 @@
 /* Begin PBXFileReference section */
 		0A44C7F6182093F900E16B5E /* GeomsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeomsScene.cpp; sourceTree = "<group>"; };
 		0A44C7F7182093F900E16B5E /* GeomsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeomsScene.h; sourceTree = "<group>"; };
+		0A4D696E183058C500FCE329 /* Ship.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ship.cpp; sourceTree = "<group>"; };
+		0A4D696F183058C500FCE329 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
 		42049B5216ADBB61005DD1F9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		42049B5316ADBB61005DD1F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		42049B5416ADBB61005DD1F9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
@@ -158,6 +162,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A4D696B1830586900FCE329 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				0A4D696E183058C500FCE329 /* Ship.cpp */,
+				0A4D696F183058C500FCE329 /* Ship.h */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
 		0ABC8605181D95DB00CC5667 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +217,7 @@
 		42C932C61491A0DB0098216A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				0A4D696B1830586900FCE329 /* Nodes */,
 				42C932EF1491A5160098216A /* Geoms.cpp */,
 				42C932F01491A5160098216A /* Geoms.h */,
 				0A44C7F6182093F900E16B5E /* GeomsScene.cpp */,
@@ -433,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A4D6970183058C500FCE329 /* Ship.cpp in Sources */,
 				0A44C7F8182093F900E16B5E /* GeomsScene.cpp in Sources */,
 				42C932F11491A5160098216A /* Geoms.cpp in Sources */,
 			);
@@ -442,6 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A4D6971183058C500FCE329 /* Ship.cpp in Sources */,
 				0A44C7F9182093F900E16B5E /* GeomsScene.cpp in Sources */,
 				5B61611614CCC24C0073B857 /* Geoms.cpp in Sources */,
 			);

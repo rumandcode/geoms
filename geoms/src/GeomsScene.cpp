@@ -30,5 +30,22 @@ GeomsScene* GeomsScene::load(const char* filePath)
 
 void GeomsScene::onLoad()
 {
+    // Get light node
+    Node* lightNode = this->findNode("directionalLight");
+    Light* light = lightNode->getLight();
     
+    // Initialize box model
+    Node* boxNode = this->findNode("box");
+    Model* boxModel = boxNode->getModel();
+    Material* boxMaterial = boxModel->setMaterial("res/box.material");
+    boxMaterial->getParameter("u_ambientColor")->setValue(this->getAmbientColor());
+    boxMaterial->getParameter("u_lightColor")->setValue(light->getColor());
+    boxMaterial->getParameter("u_lightDirection")->setValue(lightNode->getForwardVectorView());
+    
+    // Create physics object
+    PhysicsRigidBody::Parameters params;
+    params.mass = 10.f;
+    boxNode->setCollisionObject(PhysicsCollisionObject::RIGID_BODY,
+                                PhysicsCollisionShape::sphere(),
+                                &params);
 }
